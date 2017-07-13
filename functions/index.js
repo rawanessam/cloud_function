@@ -17,13 +17,48 @@ let responseObject={
 "source": "DuckDuckGo"
 }
   // request.body
-  console.log(request.body.result.parameters)
+  //console.log(request.body.result.parameters.duration.amount)
   
   
   let company=request.body.result.parameters.companies
   let position= request.body.result.parameters.Positions
-  let duration = request.body.result.parameters.duration
-  responseObject.speech=requestBody
+
+  let transaltor={
+    'mo':'month'
+  //y
+}
+transaltor['mo']
+  // if(request.body.result.parameters.duration.amount==1)
+  // {
+  //   if (request.body.result.parameters.duration.unit=='mo')
+  //   {
+  //     let duration_amount=String(1)+'month'
+  //   } else if(request.body.result.parameters.duration.unit=='yr') {
+  //     let duration_amount=String(1)+'year'
+  //   }else if(request.body.result.parameters.duration.unit=='wk'){
+  //     let duration_amount=String(1)+'week'
+  //   } else{
+  //     let duration_amount=String(1)+'day'
+  //   }
+  // }else{
+  //   if (request.body.result.parameters.duration.unit=='mo')
+  //   {
+  //     let duration_amount=String(request.body.result.parameters.duration.amount)+'months'
+  //   }else if(request.body.result.parameters.duration.unit=='wk'){
+  //     let duration_amount=String(request.body.result.parameters.duration.amount)+'weeks'
+  //   } else{
+  //     let duration_amount=String(request.body.result.parameters.duration.amount)+'days'
+  //   }
+  // }  
   
-  response.send(responseObject);
+  
+    responseObject.speech="You waroked as a "+ position + " at "+ company +' for'
+    console.log('Yes')
+    response.json(responseObject);
+  // }else{
+  //   response.json({})
+  // }
+  1
+  
+  
  });
